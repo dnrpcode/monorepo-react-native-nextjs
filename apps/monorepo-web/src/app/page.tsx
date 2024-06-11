@@ -1,5 +1,6 @@
 import Image from "next/image";
 import styles from "./page.module.css";
+import { shared } from "shared";
 
 export default function Home() {
   return (
@@ -15,7 +16,7 @@ export default function Home() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            By{" "}
+            By{shared}
             <Image
               src="/vercel.svg"
               alt="Vercel Logo"

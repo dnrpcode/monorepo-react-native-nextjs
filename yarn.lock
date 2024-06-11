@@ -3193,8 +3193,10 @@ __metadata:
     "@types/react": ^18.2.6
     "@types/react-test-renderer": ^18.0.0
     babel-jest: ^29.6.3
+    crna-make-symlinks-for-yarn-workspaces: ^1.0.1
     eslint: ^8.19.0
     jest: ^29.6.3
+    metro-bundler-config-yarn-workspaces: ^1.0.3
     prettier: 2.8.8
     react: 18.2.0
     react-native: 0.74.2
@@ -4227,6 +4229,27 @@ __metadata:
   languageName: node
   linkType: hard
 
+"crna-make-symlinks-for-yarn-workspaces@npm:^1.0.1":
+  version: 1.0.1
+  resolution: "crna-make-symlinks-for-yarn-workspaces@npm:1.0.1"
+  dependencies:
+    find-root: ^1.1.0
+    fs-extra: ^5.0.0
+  checksum: 46ba8064b8a1c99dcc75af67ca63480b2f2cefbaf28acf0cb45eeaf53a2da09f5d39f3f0a74de3b6109b075c82c2cc836e52d359ee4fef85e49d63e639a29fd5
+  languageName: node
+  linkType: hard
+
+"cross-spawn@npm:^5.1.0":
+  version: 5.1.0
+  resolution: "cross-spawn@npm:5.1.0"
+  dependencies:
+    lru-cache: ^4.0.1
+    shebang-command: ^1.2.0
+    which: ^1.2.9
+  checksum: 726939c9954fc70c20e538923feaaa33bebc253247d13021737c3c7f68cdc3e0a57f720c0fe75057c0387995349f3f12e20e9bfdbf12274db28019c7ea4ec166
+  languageName: node
+  linkType: hard
+
 "cross-spawn@npm:^7.0.0, cross-spawn@npm:^7.0.2, cross-spawn@npm:^7.0.3":
   version: 7.0.3
   resolution: "cross-spawn@npm:7.0.3"
@@ -4452,6 +4475,13 @@ __metadata:
   dependencies:
     esutils: ^2.0.2
   checksum: fd7673ca77fe26cd5cba38d816bc72d641f500f1f9b25b83e8ce28827fe2da7ad583a8da26ab6af85f834138cf8dae9f69b0cd6ab925f52ddab1754db44d99ce
+  languageName: node
+  linkType: hard
+
+"dotenv@npm:^4.0.0":
+  version: 4.0.0
+  resolution: "dotenv@npm:4.0.0"
+  checksum: 558b099798d73504eb354f9d71435d102744cf5e04d400dee5afc62179997abaeb3e30198cffa3a9c5c757bb3d863d6fd0ae9924c5f55c8b99326e1a7874796b
   languageName: node
   linkType: hard
 
@@ -5305,6 +5335,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"find-root@npm:^1.1.0":
+  version: 1.1.0
+  resolution: "find-root@npm:1.1.0"
+  checksum: b2a59fe4b6c932eef36c45a048ae8f93c85640212ebe8363164814990ee20f154197505965f3f4f102efc33bfb1cbc26fd17c4a2fc739ebc51b886b137cbefaf
+  languageName: node
+  linkType: hard
+
 "find-up@npm:^3.0.0":
   version: 3.0.0
   resolution: "find-up@npm:3.0.0"
@@ -5352,6 +5389,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"flatten@npm:^1.0.2":
+  version: 1.0.3
+  resolution: "flatten@npm:1.0.3"
+  checksum: 5c57379816f1692aaa79fbc6390e0a0644e5e8442c5783ed57c6d315468eddbc53a659eaa03c9bb1e771b0f4a9bd8dd8a2620286bf21fd6538a7857321fdfb20
+  languageName: node
+  linkType: hard
+
 "flow-enums-runtime@npm:^0.0.6":
   version: 0.0.6
   resolution: "flow-enums-runtime@npm:0.0.6"
@@ -5389,6 +5433,17 @@ __metadata:
   version: 0.5.2
   resolution: "fresh@npm:0.5.2"
   checksum: 13ea8b08f91e669a64e3ba3a20eb79d7ca5379a81f1ff7f4310d54e2320645503cc0c78daedc93dfb6191287295f6479544a649c64d8e41a1c0fb0c221552346
+  languageName: node
+  linkType: hard
+
+"fs-extra@npm:^5.0.0":
+  version: 5.0.0
+  resolution: "fs-extra@npm:5.0.0"
+  dependencies:
+    graceful-fs: ^4.1.2
+    jsonfile: ^4.0.0
+    universalify: ^0.1.0
+  checksum: b3dcaf1d545097013c4fa649951c85cad1b845316ab473cc3440254a45e9b0b17d8ca9355af477e982c7d126f1a30417bcf78b1f744593ce77a0f43165f2d5e5
   languageName: node
   linkType: hard
 
@@ -5534,6 +5589,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"get-yarn-workspaces@npm:^1.0.0":
+  version: 1.0.2
+  resolution: "get-yarn-workspaces@npm:1.0.2"
+  dependencies:
+    find-root: ^1.1.0
+    flatten: ^1.0.2
+    glob: ^7.1.2
+  checksum: 884a6fcb141b1a68fb0d93fdd5cbae3ef552156c1a9d35cde11bd9c706a153e1cb3b5f88314554c802c528bd2e1c69cc48fa542891db286e47ae89c85dc091ae
+  languageName: node
+  linkType: hard
+
 "glob-parent@npm:^5.1.2":
   version: 5.1.2
   resolution: "glob-parent@npm:5.1.2"
@@ -5582,7 +5648,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"glob@npm:^7.1.1, glob@npm:^7.1.3, glob@npm:^7.1.4":
+"glob@npm:^7.1.1, glob@npm:^7.1.2, glob@npm:^7.1.3, glob@npm:^7.1.4":
   version: 7.2.3
   resolution: "glob@npm:7.2.3"
   dependencies:
@@ -5645,7 +5711,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"graceful-fs@npm:^4.1.11, graceful-fs@npm:^4.1.3, graceful-fs@npm:^4.1.6, graceful-fs@npm:^4.2.0, graceful-fs@npm:^4.2.11, graceful-fs@npm:^4.2.4, graceful-fs@npm:^4.2.6, graceful-fs@npm:^4.2.9":
+"graceful-fs@npm:^4.1.11, graceful-fs@npm:^4.1.2, graceful-fs@npm:^4.1.3, graceful-fs@npm:^4.1.6, graceful-fs@npm:^4.2.0, graceful-fs@npm:^4.2.11, graceful-fs@npm:^4.2.4, graceful-fs@npm:^4.2.6, graceful-fs@npm:^4.2.9":
   version: 4.2.11
   resolution: "graceful-fs@npm:4.2.11"
   checksum: ac85f94da92d8eb6b7f5a8b20ce65e43d66761c55ce85ac96df6865308390da45a8d3f0296dd3a663de65d30ba497bd46c696cc1e248c72b13d6d567138a4fc7
@@ -7202,6 +7268,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"lru-cache@npm:^4.0.1":
+  version: 4.1.5
+  resolution: "lru-cache@npm:4.1.5"
+  dependencies:
+    pseudomap: ^1.0.2
+    yallist: ^2.1.2
+  checksum: 4bb4b58a36cd7dc4dcec74cbe6a8f766a38b7426f1ff59d4cf7d82a2aa9b9565cd1cb98f6ff60ce5cd174524868d7bc9b7b1c294371851356066ca9ac4cf135a
+  languageName: node
+  linkType: hard
+
 "lru-cache@npm:^5.1.1":
   version: 5.1.1
   resolution: "lru-cache@npm:5.1.1"
@@ -7295,6 +7371,15 @@ __metadata:
     hermes-parser: 0.20.1
     nullthrows: ^1.1.1
   checksum: 0fd9b7f3c6807163a4537939ead7d4a033b6233ba489bbc84c843dc1de7b6cddd185fee0a1c1791d05334cd8efebf434cbff486a42506843739088f3bb3c6358
+  languageName: node
+  linkType: hard
+
+"metro-bundler-config-yarn-workspaces@npm:^1.0.3":
+  version: 1.0.3
+  resolution: "metro-bundler-config-yarn-workspaces@npm:1.0.3"
+  dependencies:
+    get-yarn-workspaces: ^1.0.0
+  checksum: 4019e915ad18802afe8ea22fc01fb5db0c545650445605329c8a5b09e4cc66487d20b20b992823c9f9d841c063066d58a5d5573ddfcd2dd3041c29ac3fbda3a2
   languageName: node
   linkType: hard
 
@@ -7705,7 +7790,10 @@ __metadata:
     eslint-config-next: 14.2.3
     next: 14.2.3
     react: ^18
+    react-app-rewire-babel-loader: ^0.1.1
+    react-app-rewired: ^2.2.1
     react-dom: ^18
+    shared: "workspace:^"
     typescript: ^5
   languageName: unknown
   linkType: soft
@@ -8451,6 +8539,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"pseudomap@npm:^1.0.2":
+  version: 1.0.2
+  resolution: "pseudomap@npm:1.0.2"
+  checksum: 856c0aae0ff2ad60881168334448e898ad7a0e45fe7386d114b150084254c01e200c957cf378378025df4e052c7890c5bd933939b0e0d2ecfcc1dc2f0b2991f5
+  languageName: node
+  linkType: hard
+
 "punycode@npm:^2.1.0":
   version: 2.3.1
   resolution: "punycode@npm:2.3.1"
@@ -8492,6 +8587,42 @@ __metadata:
   version: 1.2.1
   resolution: "range-parser@npm:1.2.1"
   checksum: 0a268d4fea508661cf5743dfe3d5f47ce214fd6b7dec1de0da4d669dd4ef3d2144468ebe4179049eff253d9d27e719c88dae55be64f954e80135a0cada804ec9
+  languageName: node
+  linkType: hard
+
+"react-app-rewire-babel-loader@npm:^0.1.1":
+  version: 0.1.1
+  resolution: "react-app-rewire-babel-loader@npm:0.1.1"
+  dependencies:
+    react-app-rewired: ^1.4.0
+  checksum: a7f759018ee704d8fe47947f9044fe3d2fdb8bf4a957c625b40d0725c623c18dae1a2ecc9bceb2b53343ac51d92a6d8e272b180e0005a66998c1d118e369afac
+  languageName: node
+  linkType: hard
+
+"react-app-rewired@npm:^1.4.0":
+  version: 1.6.2
+  resolution: "react-app-rewired@npm:1.6.2"
+  dependencies:
+    cross-spawn: ^5.1.0
+    dotenv: ^4.0.0
+  peerDependencies:
+    react-scripts: ^1.0.14
+  bin:
+    react-app-rewired: ./bin/index.js
+  checksum: 89071e25d788a97ed819c7e3656dfcba8e9097119e94fb824fcc87cf0fbbc3cb8926b48fc47171aa6099e5bdabab47120f3535e30c88780bf4414e0b32a7929e
+  languageName: node
+  linkType: hard
+
+"react-app-rewired@npm:^2.2.1":
+  version: 2.2.1
+  resolution: "react-app-rewired@npm:2.2.1"
+  dependencies:
+    semver: ^5.6.0
+  peerDependencies:
+    react-scripts: ">=2.1.3"
+  bin:
+    react-app-rewired: bin/index.js
+  checksum: 0b330c2b46413dc5fbb68e68c07704830397b1cfc8335f65d8f856bfbb6c4d8259fad049fc2a117c18794f321e726b844649266f42ff4c3fa044f00be48c1850
   languageName: node
   linkType: hard
 
@@ -9136,12 +9267,34 @@ __metadata:
   languageName: node
   linkType: hard
 
+"shared@workspace:^, shared@workspace:apps/shared":
+  version: 0.0.0-use.local
+  resolution: "shared@workspace:apps/shared"
+  languageName: unknown
+  linkType: soft
+
+"shebang-command@npm:^1.2.0":
+  version: 1.2.0
+  resolution: "shebang-command@npm:1.2.0"
+  dependencies:
+    shebang-regex: ^1.0.0
+  checksum: 9eed1750301e622961ba5d588af2212505e96770ec376a37ab678f965795e995ade7ed44910f5d3d3cb5e10165a1847f52d3348c64e146b8be922f7707958908
+  languageName: node
+  linkType: hard
+
 "shebang-command@npm:^2.0.0":
   version: 2.0.0
   resolution: "shebang-command@npm:2.0.0"
   dependencies:
     shebang-regex: ^3.0.0
   checksum: 6b52fe87271c12968f6a054e60f6bde5f0f3d2db483a1e5c3e12d657c488a15474121a1d55cd958f6df026a54374ec38a4a963988c213b7570e1d51575cea7fa
+  languageName: node
+  linkType: hard
+
+"shebang-regex@npm:^1.0.0":
+  version: 1.0.0
+  resolution: "shebang-regex@npm:1.0.0"
+  checksum: 404c5a752cd40f94591dfd9346da40a735a05139dac890ffc229afba610854d8799aaa52f87f7e0c94c5007f2c6af55bdcaeb584b56691926c5eaf41dc8f1372
   languageName: node
   linkType: hard
 
@@ -10134,6 +10287,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"which@npm:^1.2.9":
+  version: 1.3.1
+  resolution: "which@npm:1.3.1"
+  dependencies:
+    isexe: ^2.0.0
+  bin:
+    which: ./bin/which
+  checksum: f2e185c6242244b8426c9df1510e86629192d93c1a986a7d2a591f2c24869e7ffd03d6dac07ca863b2e4c06f59a4cc9916c585b72ee9fa1aa609d0124df15e04
+  languageName: node
+  linkType: hard
+
 "which@npm:^2.0.1":
   version: 2.0.2
   resolution: "which@npm:2.0.2"
@@ -10266,6 +10430,13 @@ __metadata:
   version: 5.0.8
   resolution: "y18n@npm:5.0.8"
   checksum: 54f0fb95621ee60898a38c572c515659e51cc9d9f787fb109cef6fde4befbe1c4602dc999d30110feee37456ad0f1660fa2edcfde6a9a740f86a290999550d30
+  languageName: node
+  linkType: hard
+
+"yallist@npm:^2.1.2":
+  version: 2.1.2
+  resolution: "yallist@npm:2.1.2"
+  checksum: 9ba99409209f485b6fcb970330908a6d41fa1c933f75e08250316cce19383179a6b70a7e0721b89672ebb6199cc377bf3e432f55100da6a7d6e11902b0a642cb
   languageName: node
   linkType: hard
 

@@ -11,7 +11,8 @@
   "dependencies": {
     "next": "14.2.3",
     "react": "^18",
-    "react-dom": "^18"
+    "react-dom": "^18",
+    "shared": "workspace:^"
   },
   "devDependencies": {
     "@types/node": "^20",
@@ -19,6 +20,8 @@
     "@types/react-dom": "^18",
     "eslint": "^8",
     "eslint-config-next": "14.2.3",
+    "react-app-rewire-babel-loader": "^0.1.1",
+    "react-app-rewired": "^2.2.1",
     "typescript": "^5"
   }
 }
