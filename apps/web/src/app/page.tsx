@@ -1,7 +1,12 @@
-import Image from "next/image";
+"use client";
 import styles from "./page.module.css";
-import { shared } from "@monorepo/shared";
+import { shared, useCounterStore } from "@monorepo/shared";
 
 export default function Home() {
-  return <main className={styles.main}>{shared}</main>;
+  const { count } = useCounterStore();
+  return (
+    <main className={styles.main}>
+      {shared}, Count form zuntand share {count}
+    </main>
+  );
 }

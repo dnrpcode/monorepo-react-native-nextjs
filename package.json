@@ -11,10 +11,12 @@
     "web:build": "yarn workspace monorepo-web next build",
     "web:start": "yarn workspace monorepo-web next start",
     "web:lint": "yarn workspace monorepo-web next lint",
+    "web:install": "yarn workspace monorepo-web install",
     "mobile:android": "yarn workspace MonorepoApp react-native run-android",
     "mobile:ios": "yarn workspace MonorepoApp react-native run-ios",
     "mobile:lint": "yarn workspace MonorepoApp eslint .",
     "mobile:start": "yarn workspace MonorepoApp react-native start",
-    "mobile:test": "yarn workspace MonorepoApp jest"
+    "mobile:test": "yarn workspace MonorepoApp jest",
+    "shared:build": "yarn workspace @monorepo/shared build"
   }
 }
