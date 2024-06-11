@@ -2,14 +2,14 @@
   "name": "@monorepo/shared",
   "version": "1.0.0",
   "main": "dist/index.js",
+  "private": true,
   "scripts": {
     "build": "rimraf dist && tsc",
     "postinstall": "yarn build",
     "watch": "tsc --watch"
   },
   "dependencies": {
-    "react": "18.0.0",
-    "react-native": "0.69.1"
+    "zustand": "^4.5.2"
   },
   "devDependencies": {
     "rimraf": "^3.0.2",
