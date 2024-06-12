@@ -5,13 +5,15 @@ import {
   StatusBar,
   StyleSheet,
   Text,
+  TouchableOpacity,
   useColorScheme,
 } from 'react-native';
 import {Colors} from 'react-native/Libraries/NewAppScreen';
-import {shared} from '@monorepo/shared';
+import {shared, useCounterStore} from '@monorepo/shared';
 
 function App(): React.JSX.Element {
   const isDarkMode = useColorScheme() === 'dark';
+  const {count, decrement, increment} = useCounterStore();
 
   const backgroundStyle = {
     backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
@@ -27,6 +29,15 @@ function App(): React.JSX.Element {
         contentInsetAdjustmentBehavior="automatic"
         style={backgroundStyle}>
         <Text style={styles.title}>{shared}</Text>
+        <Text style={styles.sectionTitle}>
+          Count form zuntand share {count}
+        </Text>
+        <TouchableOpacity onPress={decrement} style={styles.button}>
+          <Text>Decrement</Text>
+        </TouchableOpacity>
+        <TouchableOpacity onPress={increment} style={styles.button}>
+          <Text>Increment</Text>
+        </TouchableOpacity>
       </ScrollView>
     </SafeAreaView>
   );
@@ -54,6 +65,13 @@ const styles = StyleSheet.create({
     fontSize: 32,
     flex: 1,
     alignSelf: 'center',
+  },
+  button: {
+    padding: 10,
+    backgroundColor: 'blue',
+    margin: 10,
+    borderRadius: 4,
+    color: 'white',
   },
 });
 

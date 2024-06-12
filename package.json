@@ -5,5 +5,19 @@
   "workspaces": [
     "apps/*"
   ],
-  "packageManager": "yarn@3.6.4"
+  "scripts": {
+    "web:dev": "yarn workspace monorepo-web next dev",
+    "web:build": "yarn workspace monorepo-web next build",
+    "web:start": "yarn workspace monorepo-web next start",
+    "web:install": "yarn workspace monorepo-web install",
+    "web:lint": "yarn workspace monorepo-web next lint",
+    "mobile:android": "yarn workspace mobile react-native run-android",
+    "mobile:ios": "yarn workspace mobile react-native run-ios",
+    "mobile:start": "yarn workspace mobile react-native start",
+    "mobile:install": "yarn workspace mobile install",
+    "mobile:lint": "yarn workspace mobile eslint .",
+    "mobile:test": "yarn workspace mobile jest",
+    "mobile:resetcache": "yarn workspace mobile react-native start --reset-cache",
+    "shared:build": "yarn workspace @monorepo/shared build"
+  }
 }
