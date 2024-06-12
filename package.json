@@ -5,7 +5,6 @@
   "workspaces": [
     "apps/*"
   ],
-  "packageManager": "yarn@3.6.4",
   "scripts": {
     "web:dev": "yarn workspace monorepo-web next dev",
     "web:build": "yarn workspace monorepo-web next build",
