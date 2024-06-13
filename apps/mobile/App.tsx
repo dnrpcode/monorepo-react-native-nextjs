@@ -33,10 +33,13 @@ function App(): React.JSX.Element {
           Count form zuntand share {count}
         </Text>
         <TouchableOpacity onPress={decrement} style={styles.button}>
-          <Text>Decrement</Text>
+          <Text style={styles.txtButton}>Decrement</Text>
         </TouchableOpacity>
+        {/* <ButtonNative>
+          <Text>button</Text>
+        </ButtonNative> */}
         <TouchableOpacity onPress={increment} style={styles.button}>
-          <Text>Increment</Text>
+          <Text style={styles.txtButton}>Increment</Text>
         </TouchableOpacity>
       </ScrollView>
     </SafeAreaView>
@@ -71,6 +74,11 @@ const styles = StyleSheet.create({
     backgroundColor: 'blue',
     margin: 10,
     borderRadius: 4,
+    color: 'white',
+    alignItems: 'center',
+  },
+  txtButton: {
+    fontSize: 20,
     color: 'white',
   },
 });

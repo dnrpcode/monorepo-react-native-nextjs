@@ -4,3 +4,4 @@ export const add = (a: number, b: number) => {
 export const shared = "Hallo from shared!";
 
 export { useCounterStore } from "./stores/counterStore";
+export { Button } from './ui/Button';
