@@ -8,8 +8,6 @@
     "watch": "tsc --watch"
   },
   "dependencies": {
-    "react": "18.2.0",
-    "react-native": "0.74.2",
     "zustand": "^4.5.2"
   },
   "devDependencies": {

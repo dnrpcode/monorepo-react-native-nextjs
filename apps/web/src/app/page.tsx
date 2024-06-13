@@ -1,6 +1,6 @@
 "use client";
 import styles from "./page.module.css";
-import { shared, useCounterStore } from "@monorepo/shared";
+import ButtonShared, { shared, useCounterStore } from "@monorepo/shared";
 
 export default function Home() {
   const { count, decrement, increment } = useCounterStore();
@@ -9,6 +9,7 @@ export default function Home() {
       {shared}, Count form zuntand share {count}
       <button onClick={decrement}>decrement</button>
       <button onClick={increment}>increment</button>
+      {/* <ButtonShared/> */}
     </main>
   );
 }

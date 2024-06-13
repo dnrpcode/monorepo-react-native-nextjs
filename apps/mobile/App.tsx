@@ -9,7 +9,9 @@ import {
   useColorScheme,
 } from 'react-native';
 import {Colors} from 'react-native/Libraries/NewAppScreen';
-import {shared, useCounterStore} from '@monorepo/shared';
+import ButtonShared, {shared, useCounterStore} from '@monorepo/shared';
+import {TamaguiProvider, createTamagui} from '@tamagui/core';
+import {config} from '@tamagui/config/v3';
 
 function App(): React.JSX.Element {
   const isDarkMode = useColorScheme() === 'dark';
@@ -19,27 +21,33 @@ function App(): React.JSX.Element {
     backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
   };
 
+  const tamaguiConfig = createTamagui(config);
+  // make TypeScript type everything based on your config
+
   return (
-    <SafeAreaView style={backgroundStyle}>
-      <StatusBar
-        barStyle={isDarkMode ? 'light-content' : 'dark-content'}
-        backgroundColor={backgroundStyle.backgroundColor}
-      />
-      <ScrollView
-        contentInsetAdjustmentBehavior="automatic"
-        style={backgroundStyle}>
-        <Text style={styles.title}>{shared}</Text>
-        <Text style={styles.sectionTitle}>
-          Count form zuntand share {count}
-        </Text>
-        <TouchableOpacity onPress={decrement} style={styles.button}>
-          <Text>Decrement</Text>
-        </TouchableOpacity>
-        <TouchableOpacity onPress={increment} style={styles.button}>
-          <Text>Increment</Text>
-        </TouchableOpacity>
-      </ScrollView>
-    </SafeAreaView>
+    <TamaguiProvider config={tamaguiConfig}>
+      <SafeAreaView style={backgroundStyle}>
+        <StatusBar
+          barStyle={isDarkMode ? 'light-content' : 'dark-content'}
+          backgroundColor={backgroundStyle.backgroundColor}
+        />
+        <ScrollView
+          contentInsetAdjustmentBehavior="automatic"
+          style={backgroundStyle}>
+          <Text style={styles.title}>{shared}</Text>
+          <Text style={styles.sectionTitle}>
+            Count form zuntand share {count}
+          </Text>
+          <TouchableOpacity onPress={decrement} style={styles.button}>
+            <Text>Decrement</Text>
+          </TouchableOpacity>
+          <TouchableOpacity onPress={increment} style={styles.button}>
+            <Text>Increment</Text>
+          </TouchableOpacity>
+          <ButtonShared />
+        </ScrollView>
+      </SafeAreaView>
+    </TamaguiProvider>
   );
 }
 

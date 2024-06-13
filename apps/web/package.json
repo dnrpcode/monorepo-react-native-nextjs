@@ -10,9 +10,12 @@
   },
   "dependencies": {
     "@monorepo/shared": "1.0.0",
+    "@tamagui/next-plugin": "^1.100.3",
+    "@tamagui/next-theme": "^1.100.3",
     "next": "14.2.3",
     "react": "^18",
-    "react-dom": "^18"
+    "react-dom": "^18",
+    "react-native-web": "^0.19.12"
   },
   "devDependencies": {
     "@types/node": "^20",
