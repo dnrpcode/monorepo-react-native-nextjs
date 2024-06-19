@@ -1,17 +1,9 @@
 import React from 'react';
-import {
-  SafeAreaView,
-  ScrollView,
-  StatusBar,
-  StyleSheet,
-  Text,
-  TouchableOpacity,
-  useColorScheme,
-} from 'react-native';
+import {Button, StyleSheet, Text, View, useColorScheme} from 'react-native';
 import {Colors} from 'react-native/Libraries/NewAppScreen';
 import {shared, useCounterStore} from '@monorepo/shared';
 
-function App(): React.JSX.Element {
+function App() {
   const isDarkMode = useColorScheme() === 'dark';
   const {count, decrement, increment} = useCounterStore();
 
@@ -20,58 +12,39 @@ function App(): React.JSX.Element {
   };
 
   return (
-    <SafeAreaView style={backgroundStyle}>
-      <StatusBar
-        barStyle={isDarkMode ? 'light-content' : 'dark-content'}
-        backgroundColor={backgroundStyle.backgroundColor}
-      />
-      <ScrollView
-        contentInsetAdjustmentBehavior="automatic"
-        style={backgroundStyle}>
-        <Text style={styles.title}>{shared}</Text>
-        <Text style={styles.sectionTitle}>
-          Count form zuntand share {count}
-        </Text>
-        <TouchableOpacity onPress={decrement} style={styles.button}>
-          <Text>Decrement</Text>
-        </TouchableOpacity>
-        <TouchableOpacity onPress={increment} style={styles.button}>
-          <Text>Increment</Text>
-        </TouchableOpacity>
-      </ScrollView>
-    </SafeAreaView>
+    <View style={[backgroundStyle, styles.page]}>
+      <Text style={styles.title}>{shared}</Text>
+      <Text style={styles.sectionTitle}>
+        Count from shared code zustand: {count}
+      </Text>
+      <View style={styles.buttons}>
+        <Button title="Decrement" onPress={decrement} />
+        <Button title="Increment" onPress={increment} />
+      </View>
+    </View>
   );
 }
 
 const styles = StyleSheet.create({
-  sectionContainer: {
-    marginTop: 32,
-    paddingHorizontal: 24,
-  },
-  sectionTitle: {
-    fontSize: 24,
-    fontWeight: '600',
-  },
-  sectionDescription: {
-    marginTop: 8,
-    fontSize: 18,
-    fontWeight: '400',
-  },
-  highlight: {
-    fontWeight: '700',
+  page: {
+    flex: 1,
+    gap: 16,
+    padding: 16,
+    alignItems: 'center',
+    justifyContent: 'center',
   },
   title: {
     fontWeight: '700',
     fontSize: 32,
-    flex: 1,
     alignSelf: 'center',
   },
-  button: {
-    padding: 10,
-    backgroundColor: 'blue',
-    margin: 10,
-    borderRadius: 4,
-    color: 'white',
+  sectionTitle: {
+    fontSize: 20,
+    fontWeight: '600',
+  },
+  buttons: {
+    flexDirection: 'row',
+    gap: 16,
   },
 });
 
