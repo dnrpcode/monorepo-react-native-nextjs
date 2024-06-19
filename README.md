@@ -7,18 +7,21 @@ This is project to learn sharing code JavaScript/TypeScript in monorepo use **Ya
  - State Management: [Zustand](https://github.com/pmndrs/zustand)
  - VanillaJs
 
-## 📱 Demo
+## 📽️ Demo
  
 🌐 **Website:**
-![2024-06-11 21 35 52](https://github.com/dnrpcode/react-native-nextjs-monorepo/assets/109610332/0af6a8f1-9dc4-4d2b-9d8a-535827201212)
+
+
+https://github.com/dnrpcode/monorepo-react-native-nextjs/assets/109610332/38dbfb3c-4b88-4555-8c2f-a3ae27f98afc
+
 
 🤖 **Android:**
 
-![2024-06-11 21 35 52](https://github.com/dnrpcode/react-native-nextjs-monorepo/assets/109610332/0af6a8f1-9dc4-4d2b-9d8a-535827201212)
+https://github.com/dnrpcode/monorepo-react-native-nextjs/assets/109610332/589b0cef-b329-4c11-89a9-accc0b1f190b
 
 🍏 **IOS:**
 
-![2024-06-11 21 35 52](https://github.com/dnrpcode/react-native-nextjs-monorepo/assets/109610332/0af6a8f1-9dc4-4d2b-9d8a-535827201212)
+https://github.com/dnrpcode/monorepo-react-native-nextjs/assets/109610332/bfc1b553-7614-441c-ae4d-269981aa2034
 
 ## Running the project?
 
@@ -39,6 +42,11 @@ This is project to learn sharing code JavaScript/TypeScript in monorepo use **Ya
 
 🍏 **IOS:**
 ```bash
+  cd apps/mobile
+  bundle install
+  cd ios
+  pod install
+  cd ../../../
   yarn mobile:ios
 ```
 
